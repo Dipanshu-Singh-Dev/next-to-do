@@ -1,16 +1,24 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-
+import TodosContainer from "@/components/Read/TodosContainer";
 const inter = Inter({ subsets: ["latin"] });
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:3000/todos");
+  const data = await res.json();
 
-export default function Home() {
+  return { props: { data } };
+}
+export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Read</title>
       </Head>
-      <main></main>
+      <main>
+        <h1>Todos</h1>
+        <TodosContainer data={data} />
+      </main>
     </>
   );
 }
