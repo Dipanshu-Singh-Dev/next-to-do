@@ -2,23 +2,28 @@
   "todos": [
     {
       "title": "Do Create",
-      "completed": "true",
+      "completed": "Yes",
       "id": 12
     },
     {
       "title": "Do Read",
-      "completed": "true",
+      "completed": "Yes",
       "id": 13
     },
     {
       "title": "Do Update",
-      "completed": "true",
+      "completed": "Yes",
       "id": 15
     },
     {
       "title": "Do Delete",
-      "completed": "true",
+      "completed": "No",
       "id": 16
+    },
+    {
+      "title": "CRUD Completed",
+      "completed": "Yes",
+      "id": 17
     }
   ]
 }

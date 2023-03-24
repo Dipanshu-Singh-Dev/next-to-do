@@ -45,7 +45,7 @@ const ID = () => {
         <label>Completed?</label>
         <br />
         <input
-          placeholder="true/false"
+          placeholder="Yes/No"
           {...register("completed", { required: true })}
         />
         <br />
