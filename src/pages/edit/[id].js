@@ -24,6 +24,11 @@ const ID = ({ data }) => {
     <>
       <Head>
         <title>Editor</title>
+        <link
+          href="https://img.icons8.com/external-outline-black-m-oki-orlando/32/null/external-crud-database-outline-outline-black-m-oki-orlando.png"
+          rel="icon"
+          type="image/x-icon"
+        />
       </Head>
       <form onSubmit={handleSubmit(patchReq)}>
         <label>Title</label>

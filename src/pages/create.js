@@ -23,6 +23,12 @@ const ID = () => {
     <>
       <Head>
         <title>Editor</title>
+        <link
+          href="https://img.icons8.com/external-outline-black-m-oki-orlando/32/null/external-crud-database-outline-outline-black-m-oki-orlando.png"
+          rel="icon"
+          type="image/x-icon"
+        />
+        https://icons8.com/icon/IQvFFBx9YNmI/crud
       </Head>
       <form onSubmit={handleSubmit(postReq)}>
         <label>Title</label>
