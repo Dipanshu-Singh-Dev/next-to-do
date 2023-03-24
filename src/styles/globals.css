@@ -5,3 +5,19 @@ a{
 button{
     padding:5px 10px;
 }
+button:hover{
+    cursor: pointer;
+}
+p,h1,tr,td,table,tbody{
+    -webkit-user-select: none;
+    user-select: none;
+}
+*{
+    text-align: center;
+}
+table{
+
+    margin: auto;
+    margin-top: 5vh;
+    width: 80%;
+}

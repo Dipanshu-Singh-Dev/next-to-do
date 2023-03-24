@@ -1,8 +1,17 @@
 import Link from "next/link";
+import axios from "axios";
+import { useRouter } from "next/router";
 const TodoContainer = ({ elem }) => {
   const { id, title, completed } = elem;
-  const handleDelete = () => {
-    console.log(id);
+  const router = useRouter();
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:3000/todos/${id}`);
+      console.log(`Todo with id ${id} deleted successfully`);
+      router.push("/");
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <>
@@ -11,11 +20,10 @@ const TodoContainer = ({ elem }) => {
         <td>{title}</td>
         <td>{completed}</td>
         <td>
-          <button>
-            <Link href={"/edit/" + id}>Edit</Link>
-          </button>
-        </td>
-        <td>
+          <Link href={"/edit/" + id}>
+            <button>Edit</button>
+          </Link>
+
           <button onClick={handleDelete}>Delete</button>
         </td>
       </tr>
